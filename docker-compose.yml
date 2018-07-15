@@ -17,14 +17,14 @@ services:
      image: wordpress:4.9.7
      volumes:
        - ./wp-root:/var/www/html
-       - ./wp-config.php:/var/www/html/wp-config.php
      ports:
        - "8080:80"
      restart: always
      environment:
+       APACHE_RUN_USER: www-data
+       APACHE_RUN_USER: www-data
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_USER: wordpress
        WORDPRESS_DB_PASSWORD: wordpress
        WORDPRESS_FORCE_SSL_LOGIN: "false"
        WORDPRESS_FORCE_SSL_ADMIN: "false"
-       WORDPRESS_DEBUG: "1"
