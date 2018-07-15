@@ -1,0 +1,10 @@
+
+# ignore dump files that are placed in /data
+*.sql
+!data/zzz*.sql
+wp-content
+!**/.placeholder
+!wp-content/themes/.placeholder
+!wp-content/plugins/.placeholder
+*.tar.gz
+wp-root
