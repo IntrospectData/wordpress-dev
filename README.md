@@ -1,3 +1,4 @@
+# IntrospectData Wordpress Dev Setup
 
 ## Prerequisites
 
@@ -30,16 +31,15 @@ What does it do:
 The above process gets you set up for running the site locally... but what about actually doing plugin or theme development? No sweat--here's what you do:
 
 * After you've completed the setup above, but before you run `docker-compose`, replace the downloaded directories for your themes and/or plugins with cloned repos from our source control setup.  
-* For example--if you're doing development on our custom salient theme:
+* For example--if you're doing development on our custom `themename` theme:
 
 ```bash
-rm -rf wp-root/wp-content/themes/salient
-rm -rf wp-root/wp-content/themes/salient-child
-git clone git@github.com:IntrospectData/salient.git wp-root/wp-content/themes/salient
-git clone git@github.com:IntrospectData/salient-child.git wp-root/wp-content/themes/salient-child
+rm -rf wp-root/wp-content/themes/themename
+rm -rf wp-root/wp-content/themes/themename-child
+git clone git@github.com:IntrospectData/themename.git wp-root/wp-content/themes/themename
+git clone git@github.com:IntrospectData/themename-child.git wp-root/wp-content/themes/themename-child
 sudo chmod -R +r wp-root
 docker-compose up -d
-
 ```
 
 that's it!
